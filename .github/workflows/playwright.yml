@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  playwright-e2e:
+  e2e-tests:
     runs-on: ubuntu-latest
     timeout-minutes: 30
 
@@ -58,7 +58,7 @@ jobs:
         run: |
           npx --yes wait-on http://127.0.0.1:8080 http://127.0.0.1:3333/tasks
 
-      - name: Run Playwright tests
+      - name: Run E2E tests
         working-directory: playwright
         env:
           CI: true
@@ -66,7 +66,7 @@ jobs:
           BASE_URL: http://127.0.0.1:8080
         run: yarn playwright test
 
-      - name: Upload Playwright report
+      - name: Publish HTML report
         if: always()
         uses: actions/upload-artifact@v4
         with:
