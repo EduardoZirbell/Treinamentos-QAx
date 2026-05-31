@@ -1,0 +1,40 @@
+{
+    "success": {
+        "name": "Task Success",
+        "is_done": false
+    },
+    "update": {
+        "name": "Task Updated",
+        "is_done": true
+    },
+    "duplicate": {
+        "name": "Task Duplicate",
+        "is_done": false
+    },
+    "name_invalid": {
+        "name": "",
+        "is_done": false
+    },
+    "is_done_invalid": {
+        "name": "Task Invalid",
+        "is_done": true
+    },
+    "required": {
+        "name": "", 
+        "is_done": false
+    },
+    "order": {
+        "task1": {
+            "name": "Task A",
+            "is_done": false
+        },
+        "task2": {
+            "name": "Task B",
+            "is_done": false
+        },
+        "task3": {
+            "name": "Task C",
+            "is_done": false
+        }
+    }
+}
